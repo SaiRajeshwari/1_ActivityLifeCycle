@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="@color/dark_cyan"
+    android:orientation="vertical"
+    tools:context="com.example.rajee.a1_activitylifecycle.MainActivity">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_margin="5dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/activity_a"
+            android:textSize="@dimen/font_large"
+            android:textColor="@color/white"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="20dp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_vertical">
+        <Button
+            android:id="@+id/start_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start_b"
+            android:textSize="@dimen/font_medium"
+            android:textColor="@color/black"
+            android:background="@color/bright_yellow"
+            android:padding="15dp"
+            android:layout_margin="10dp"/>
+        <Button
+            android:id="@+id/start_dialog"
+            android:layout_toRightOf="@id/start_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog"
+            android:textSize="@dimen/font_medium"
+            android:textColor="@color/black"
+            android:background="@color/bright_yellow"
+            android:padding="15dp"
+            android:layout_margin="10dp"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/thread_counter"
+            android:textSize="@dimen/font_medium"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:id="@+id/thread_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_medium"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+
+    <View
+        style="@style/Divider"
+        android:layout_marginTop="40dp" />
+
+    <Button
+        android:id="@+id/close_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:text="@string/close_app"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_medium"
+        android:background="@color/black"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"/>
+
+</LinearLayout>
