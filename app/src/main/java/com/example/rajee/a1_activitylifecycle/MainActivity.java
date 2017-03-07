@@ -9,9 +9,11 @@ import android.widget.Button;
 import android.content.Intent;
 import android.content.Context;
 import android.util.Log;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static int thread_count = 0;
     final Context context = this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +60,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        thread_count++;
+        TextView tc = (TextView)findViewById(R.id.thread_count);
+        tc.setText(Integer.toString(thread_count));
     }
 
     @Override
