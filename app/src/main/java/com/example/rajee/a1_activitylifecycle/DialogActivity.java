@@ -3,22 +3,25 @@ package com.example.rajee.a1_activitylifecycle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 
-public class SecondActivity extends AppCompatActivity {
+public class DialogActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.activity_dialog);
 
-        Button btn_finish_b = (Button)findViewById(R.id.close_b);
-        btn_finish_b.setOnClickListener(new View.OnClickListener(){
+        Button btn_finish_dialog = (Button)findViewById(R.id.close_dialog);
+        btn_finish_dialog.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                SecondActivity.this.finish();
+                DialogActivity.this.finish();
             }
         });
+
     }
 
     @Override
@@ -33,13 +36,13 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onStop() {
-        super.onStop();
+    protected void onStart() {
+        super.onStart();
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
+    protected void onStop() {
+        super.onStop();
     }
 
     @Override

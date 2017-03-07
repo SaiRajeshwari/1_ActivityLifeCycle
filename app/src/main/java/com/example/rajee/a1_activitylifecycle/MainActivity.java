@@ -14,7 +14,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     public static int thread_count = 0;
-    final Context context = this;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,17 +33,8 @@ public class MainActivity extends AppCompatActivity {
         btn_start_dialog.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v1) {
-                final Dialog dialog = new Dialog(context);
-                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                dialog.setContentView(R.layout.simple_dialog);
-                Button btn_close_dialog = (Button)dialog.findViewById(R.id.close_dialog);
-                btn_close_dialog.setOnClickListener(new View.OnClickListener(){
-                    @Override
-                    public void onClick(View v) {
-                        dialog.dismiss();
-                    }
-                });
-                dialog.show();
+                Intent intent_dialog = new Intent(MainActivity.this, DialogActivity.class);
+                startActivity(intent_dialog);
             }
         });
 
@@ -80,4 +71,8 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 }
